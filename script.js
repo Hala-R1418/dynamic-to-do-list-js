@@ -1,18 +1,17 @@
-// Wait until the DOM is fully loaded before executing the code
 document.addEventListener('DOMContentLoaded', function () {
     
     // Select DOM elements
-    const addButton = document.getElementById('add-task');
-    const taskInput = document.getElementById('task-input');
-    const taskList = document.getElementById('task-list');
+    const addButton = document.getElementById('add-task'); // Button to add tasks
+    const taskInput = document.getElementById('task-input'); // Input field for new task
+    const taskList = document.getElementById('task-list'); // Unordered list to display tasks
     
+    // Check if these elements are successfully selected (for debugging)
+    console.log(addButton, taskInput, taskList); // Check if all elements are correctly selected
+
     // Function to add a new task
     function addTask() {
         const taskText = taskInput.value.trim(); // Get input value and trim any extra spaces
         
-        // Debugging: Log the value of taskText
-        console.log('Task Text:', taskText);
-
         // If the input is not empty, proceed with adding the task
         if (taskText !== "") {
             // Create a new <li> element for the task
