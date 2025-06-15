@@ -1,17 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
-    
+
     // Select DOM elements
-    const addButton = document.getElementById('add-task'); // Button to add tasks
-    const taskInput = document.getElementById('task-input'); // Input field for new task
-    const taskList = document.getElementById('task-list'); // Unordered list to display tasks
-    
-    // Check if these elements are successfully selected (for debugging)
-    console.log(addButton, taskInput, taskList); // Check if all elements are correctly selected
+    const addButton = document.getElementById('add-task-btn'); // Use 'add-task-btn' from HTML
+    const taskInput = document.getElementById('task-input');   // 'task-input' is correct
+    const taskList = document.getElementById('task-list');     // 'task-list' is correct
 
     // Function to add a new task
     function addTask() {
         const taskText = taskInput.value.trim(); // Get input value and trim any extra spaces
-        
+
         // If the input is not empty, proceed with adding the task
         if (taskText !== "") {
             // Create a new <li> element for the task
